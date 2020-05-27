@@ -1,3 +1,3 @@
 # forfun
 
-This is a repository just for fun.
+This is a repository just for exercise and fun.
