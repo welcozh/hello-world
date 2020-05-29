@@ -1,3 +1,3 @@
-# forfun
+# Description
 
-This is a repository just for exercise and fun.
+This is a repository to practise just for fun. It mainly includes .cpp files and some python and shell scripts.
