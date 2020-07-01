@@ -10,14 +10,18 @@ int main(int argc, char *argv[]) {
 
     start = time(NULL);
 
-    int r = 1;
-//    #pragma omp parallel for
-    for(long long i=0; i<1000000000; i++)
-        r += 1;
+    long long len = 1000000000;
+
+    long long *r = new long long[len];
+
+//    omp_set_num_threads(40);    
+//#pragma omp parallel for
+    for(long i=0; i<len; i++)
+        r[i] += i;
 
     end = time(NULL);
 
-    cout << "sum: " << r << "   time: " << end - start << "s" << endl;
+    cout << "time: " << end - start << "s" << endl;
 
     return 1;
 }
