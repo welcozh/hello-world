@@ -1,3 +1,3 @@
 # Description
 
-Hello Github!
+Hello Git!
