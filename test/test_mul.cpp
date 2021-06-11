@@ -10,14 +10,18 @@ int main(int argc, char *argv[]) {
 
     start = time(NULL);
 
-    long long r = 1;
-//    #pragma omp parallel for
-    for(long long i=0; i<10000000000; i++)
-        r *= 1.0000001;
+    long long len = 10000000000;
+    double *r = new double[len];
 
+    omp_set_num_threads(40);
+    #pragma omp parallel for
+    for(long long i=0; i<10000000000; i++) {
+        r[i] += 1;
+        r[i] *= 1.0000001;
+    }
     end = time(NULL);
 
-    cout << "mul: " << r << "   time: " << end - start << "s" << endl;
+    cout << "time: " << end - start << "s" << endl;
 
     return 1;
 }
