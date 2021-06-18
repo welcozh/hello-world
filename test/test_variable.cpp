@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	start = time(NULL);
 	for(long long i=0;i<len;i++)
 	{
-		b += 0.005;
+		a += 0.001;
 	}
 	
 	end = time(NULL);
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	start = time(NULL);
 	for(long long i=0;i<len;i++)
 	{
-		b += 0.005;
+		b += 0.001;
 	}
 	
 	end = time(NULL);
